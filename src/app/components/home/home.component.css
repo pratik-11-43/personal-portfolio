@@ -1,0 +1,12 @@
+.home {
+  text-align: center;
+  padding: 100px;
+  background: #f4f4f4;
+}
+.btn {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

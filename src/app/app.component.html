@@ -1,0 +1,35 @@
+<!-- ✅ Navigation Bar -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <a routerLink="/">MyPortfolio</a>
+    </div>
+    
+    <!-- ✅ Desktop Menu -->
+    <div class="nav-links">
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/projects">Projects</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+
+    <!-- ✅ Mobile Menu Button (FIXED) -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu" [class.active]="menuOpen">
+      <a routerLink="/" (click)="toggleMenu()">Home</a>
+      <a routerLink="/about" (click)="toggleMenu()">About</a>
+      <a routerLink="/projects" (click)="toggleMenu()">Projects</a>
+      <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Main Content -->
+<router-outlet></router-outlet>
+
+<!-- ✅ Footer -->
+<app-footer></app-footer>
