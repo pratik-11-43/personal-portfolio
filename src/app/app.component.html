@@ -4,7 +4,9 @@
     <div class="logo">
       <a routerLink="/">MyPortfolio</a>
     </div>
-    
+    <button (click)="toggleDarkMode()">
+      {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+    </button>
     <!-- ✅ Desktop Menu -->
     <div class="nav-links">
       <a routerLink="/">Home</a>
@@ -26,6 +28,9 @@
       <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
     </div>
   </div>
+
+ 
+  
 </nav>
 
 <!-- ✅ Main Content -->

@@ -11,8 +11,25 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   menuOpen = false;
+  isDarkMode: boolean | undefined;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
+    localStorage.setItem('darkMode', this.isDarkMode.toString()); // Save preference
+  }
+
+  ngOnInit() {
+    // Load dark mode preference from localStorage
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'true') {
+      this.isDarkMode = true;
+      document.body.classList.add('dark-mode');
+    }
+  }
 }
+
